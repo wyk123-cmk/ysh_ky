@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>月度报表</title>
+	<link rel="stylesheet" href="css/iconfont.css" />
+	<link rel="stylesheet" href="css/reportForms.css" />
+</head>
+<body class="page-bg">
+	<div id="app" v-cloak>
+		<div class="search-con">
+			<div class="years">
+				<span :class="dateType==0?'active':''" @click="dateClick(0)">按月</span>
+				<span :class="dateType==1?'active':''" @click="dateClick(1)">按年</span>
+			</div>
+			<div class="choice-time">
+				<span class="iconfont icon-fanhui-" @click="dateReduce"></span>
+				<p class="txt">{{startDate}}</p>
+				<span class="iconfont icon--right-jian" @click="datePlus"></span>
+			</div>
+		</div>
+		<div v-show="isConShow">
+			<div class="money-list">
+				<div>
+					<span class="title">结算金额</span>
+					<div class="money">¥<span>{{infoData.payAmount}}</span></div>
+				</div>
+				<div>
+					<span class="title">市场金额</span>
+					<div class="money">¥<span>{{infoData.payMarket}}</span></div>
+				</div>
+				<div>
+					<span class="title">节省金额</span>
+					<div class="money">¥<span>{{infoData.payEconomize}}</span></div>
+				</div>
+			</div>
+			<!-- 发货单量 eachar -->
+			<div class="con">
+				<div class="big-title">{{infoData.month}}月发货单量</div>
+				<div class="delivery-num">共发货{{expressReport.totalCount}}单</div>
+				<div id="pie"></div>
+			</div>
+			<!-- 员工发货统计 -->
+			<div class="employee con">
+				<div class="big-title">员工发货统计</div>
+				<div class="list" v-for="(e, j) in employeeReportList" :key="j">
+					<div class="name">{{e.employeeName}}<span>{{e.totalCount}}单</span></div>
+					<div class="classify">
+						<div>
+							<img src="../../static/images/caigou.png" />
+							{{e.logisticsCount}}单&nbsp;&nbsp;¥{{e.logisticsMarket}}
+						</div>
+						<div>
+							<img src="../../static/images/kuaidixiaoge.png" />
+							{{e.expressCount}}单&nbsp;&nbsp;¥{{e.expressMarket}}
+						</div>
+					</div>
+					<div class="total-num">¥{{e.totalAmount}}</div>
+				</div>
+				<button id="place" class="more" v-show="employeeReportList.length>4">查看全部</button>
+			</div>
+			<!-- 寄送地统计 -->
+			<div class="con statistics">
+				<div class="big-title">寄送地统计</div>
+				<div id="map"></div>
+				<div class="local">
+					<div class="title">寄送地统计</div>
+					<div>
+						<span>{{cityCountModel.fromMoreCityName}}寄出</span>
+						<span class="send">{{cityCountModel.fromCount}}</span>
+					</div>
+					<div>
+						<span>{{cityCountModel.toMoreCityName}}收件</span>
+						<span class="rep">{{cityCountModel.toCount}}</span>
+					</div>
+					<div>
+						<span>其他地寄出</span>
+						<span>{{cityCountModel.otherCount}}</span>
+					</div>
+				</div>
+				<div class="table">
+					<div class="tr">
+						<div class="th">城市</div>
+						<div class="th">寄件数量</div>
+						<div class="th">收件数量</div>
+					</div>
+					<div class="tr" v-for="(c, k) in cityReportList" :key="k">
+						<div class="td">{{c.cityName}}</div>
+						<div class="td send-num"><span>{{c.fromCount}}</span></div>
+						<div class="td rep-num"><span>{{c.toCount}}</span></div>
+					</div>
+				</div>
+				<button id="send" class="more" v-show="cityReportList.length>4">查看全部</button>
+			</div>
+			<div style="height: 30px;"></div>
+			<!-- <a href="" class="btn-default-css">生成PDF并下载到本地</a> -->
+		</div>
+		<div class="none-data-list" v-show="!isConShow"><img src="../../static/images/none.svg" />{{msg}}</div>
+		<div class="loading" v-if="isLoad"><div><img src="../../static/images/loading.gif" />加载中...</div></div>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.staticfile.org/vue-resource/1.5.1/vue-resource.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+<script type="text/javascript" src="js/map-china.js"></script>
+<!-- 微信 JS-SDK 如果不需要兼容小程序，则无需引用此 JS 文件。 -->  
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<!-- uni 的 SDK -->
+<script type="text/javascript" src="https://js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.1.5.2.js"></script>
+<script type="text/javascript">
+new Vue({
+	el: '#app',
+	data: {
+		isConShow: false,
+		dateType: 0,
+		startYear: 2019,
+		startDate: "",
+		startArray: [],
+		isLoad: false,
+		infoData: [],
+		expressReport: [],
+		employeeReportList: [],
+		fromProvinceReportList: [],
+		toProvinceReportList: [],
+		cityCountModel: [],
+		cityReportList: [],
+		msg: ""
+	},
+	mounted() {
+		const that = this;
+		var w = (document.body.clientWidth-60)+'px';
+		document.getElementById("pie").style.width = w;
+		document.getElementById("map").style.width = w;
+		document.addEventListener('UniAppJSBridgeReady', function() {
+			//员工发货统计 - 查看全部
+			document.getElementById("place").addEventListener('click', function(evt) {
+				uni.navigateTo({ url: '/pages/me/placeDelivery?date='+that.startDate });
+			});
+			//寄送地统计 - 查看全部
+			document.getElementById("send").addEventListener('click', function(evt) {
+				uni.navigateTo({ url: '/pages/me/sendStatistics?date='+that.startDate });
+			});
+		});
+		this.setPickDate();
+	},
+	methods: {
+		getInfo: function(){
+			const that = this;
+			that.isLoad = true;
+			let params = {};
+			if(that.dateType == 0){
+				let split = that.startDate.split("-");
+				params = {
+					year: split[0],
+					month: split[1]
+				}
+			}else{
+				params = {
+					year: that.startDate
+				}
+			}
+			let token = getQueryString("token");
+			let apiHost = getQueryString("host");
+			that.$http.get(apiHost + '/ExpressReport/GetInfo',{
+				headers: { 
+					appId: 'yshkyh5',
+					token: token
+				},  //设置的请求头
+				params: params,
+			}).then(function(res){
+				that.isLoad = false;
+				let data = res.body.data;
+				if(res.body.errCode == 200){
+					that.isConShow = true;
+					that.infoData = data;
+					that.expressReport = data.expressReport;
+					that.employeeReportList = data.employeeReportList;
+					that.fromProvinceReportList = data.fromProvinceReportList;
+					that.toProvinceReportList = data.toProvinceReportList;
+					that.cityCountModel = data.cityCountModel;
+					that.cityReportList = data.cityReportList;
+					setChartPie(that.expressReport);
+					setChartMap(data.fromProvinceReportList, data.toProvinceReportList);
+				}else{
+					that.msg = data.message;
+				}
+			},function(){
+				that.isLoad = false;
+				that.msg = "请求失败处理,请稍后";
+				// alert("请求失败处理,请稍后");
+			});
+		},
+		dateClick: function(type){
+			if(this.dateType == type) return false;
+			this.dateType = type;
+			this.setPickDate();
+		},
+		setPickDate: function(){
+			const that = this;
+			const date = new Date();
+			let _year = that.startDate==""?date.getFullYear():that.startDate;
+			let _month = date.getMonth() + 1;
+			if(that.dateType == 0){
+				that.startDate = _year+"-"+(_month>=10?_month:"0"+_month);
+			}else{
+				that.startDate = _year.split('-')[0];
+			}
+			this.getInfo();
+		},
+		datePlus: function(){
+			if(this.dateType == 0){
+				let split = this.startDate.split("-");
+				let m = Number(split[1])+1;
+				if(m > 12) return false;
+				this.startDate = split[0]+"-"+(m>=10?m:"0"+m);
+			}else{
+				let y = Number(this.startDate)+1;
+				this.startDate = String(y);
+			}
+			this.getInfo();
+		},
+		dateReduce: function(){
+			if(this.dateType == 0){
+				let split = this.startDate.split("-");
+				let m = Number(split[1])-1;
+				if(m < 1) return false;
+				this.startDate = split[0]+"-"+(m>=10?m:"0"+m);
+			}else{
+				let y = Number(this.startDate)-1;
+				this.startDate = String(y);
+			}
+			this.getInfo();
+		}
+	}
+})
+
+//环形
+function setChartPie(data){
+	var pieChart = echarts.init(document.getElementById('pie'));
+	var option = {
+		legend: {
+			orient: 'vertical',
+			left: 'right',
+			top: 0,
+			icon: "circle",
+			itemWidth: 8,//图例的宽度
+			itemHeight: 8,//图例的高度
+			selectedMode: false,
+		},
+		series: [
+			{
+				hoverAnimation : false,
+				name: '发货单量',
+				type: 'pie', //环形图的type和饼图相同
+				radius: ['40%', '60%'], //饼图的半径，第一个为内半径，第二个为外半径
+				color: ["#5585EC", "#F4BD41"],
+				startAngle: 100, //设置起始角度
+				formatter: '{b}: {d}',
+				label: {
+					show: true,
+					 rich: {
+						money: {                       
+							fontSize: '16'
+						},
+						num: {
+							color: "#999999"
+						},
+					},
+					formatter: function(params){
+						return "{money|¥"+params.data.market+"}\n{num|"+params.data.value+"单}"
+					}
+				},
+				labelLine: {
+					normal: {
+						show: true,
+					}
+				},
+				data:[
+					{ 
+						market: data.logisticsMarket, 
+						value: data.logisticsCount, 
+						name:'物流',
+					},
+					{ 
+						market: data.expressMarket, 
+						value: data.expressCount, 
+						name:'快递',
+					}
+				]
+			}
+		]
+	}
+	pieChart.setOption(option);
+}
+
+//地图
+function setChartMap(f, t){
+	let fromData = [];
+	let toData = [];
+	f.forEach(item =>{
+		fromData.push({name: item.provinceName, value: item.count})
+	});
+	t.forEach(item =>{
+		toData.push({name: item.provinceName, value: item.count})
+	});
+	var mapChart = echarts.init(document.getElementById('map'));
+	var option = {
+		tooltip: {
+			trigger: 'item',
+			padding: 0,
+			formatter: function(params) {
+				var res = "";
+				var myseries = option.series;
+				(option.series).forEach(item => {
+					for(var i = 0; i < item.data.length; i++){
+						if(item.data[i].name == params.name){
+							var color = "#5585EC";
+							if(item.name == "收件地") 
+							color = "#ED8345";
+							res = "<div style='padding: 0 8px;border-radius:3px;background:"+color+"'>"+item.data[i].value+"</div>";
+						}
+					}
+				})
+				return res;
+			}
+		},
+		legend: {
+			orient: 'vertical',
+			left: 'left',
+			bottom: 10,
+			icon: "rect",
+			itemWidth: 10,//图例的宽度
+			itemHeight: 10,//图例的高度
+		},
+		color: ["#5585EC","#ED8345"],
+		series: [{
+			name: '寄件地',
+			type: 'map',
+			mapType: 'china',
+			itemStyle: {
+				normal: {
+					areaColor:'#FFFFFF' //区域背景色
+				},
+			},
+			data: fromData,
+		},
+		{
+			name: '收件地',
+			type: 'map',
+			mapType: 'china',
+			data: toData
+		}]
+	}
+	mapChart.setOption(option);
+}
+
+//获取URL后面参数
+function getQueryString(name) { 
+	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
+	var r = window.location.search.substr(1).match(reg); 
+	if (r != null) return unescape(r[2]); 
+	return null; 
+}
+</script>
+</html>

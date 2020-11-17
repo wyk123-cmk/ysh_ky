@@ -1,0 +1,57 @@
+.historical-list{
+	background-color: #FFFFFF;
+	margin: 10px 10px 0;
+	border-radius: 5px;
+	padding: 15px;
+}
+.historical-list .item-head{
+	display: flex;
+	justify-content: space-between;
+}
+.historical-list .bill-type{
+	color: #4285f4;
+	padding-right: 10px;
+}
+.historical-list .time{
+	font-size: 12px;
+}
+.historical-list .samll-title{
+	font-size: 15px;
+	font-weight: bold;
+	padding: 20px 0;
+	display: block;
+}
+.scroll-wrapper{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding-bottom: 20px;
+}
+.item-bottom{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-top;
+}
+.item-bottom > view{
+	width: 33%;
+	font-size: 12px;
+}
+.item-bottom text{
+	display: block;
+	color: #999;
+	padding-top: 5px;
+	word-wrap:break-word; 
+	word-break:break-all;
+	overflow: hidden;
+}
+.item-bottom .amount{
+	text-align: right;
+}
+.item-bottom .amount text{
+	font-size: 22px;
+	font-weight: bold;
+	display: inline;
+	color: #333;
+}

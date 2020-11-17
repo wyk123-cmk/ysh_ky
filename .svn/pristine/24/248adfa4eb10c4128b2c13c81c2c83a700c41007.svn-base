@@ -1,0 +1,264 @@
+body{
+	font-size: 14px;
+	color: #333;
+}
+*{
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+ul, ul li, p{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.page-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0;
+	overflow-y: auto;
+	background-color: #f7f7f7;
+	overflow-x: hidden;
+}
+.search-con{
+	display: flex;
+	display: -wbekit-flex;
+	justify-content: space-between;
+	padding: 10px 15px;
+	background-color: #FFFFFF;
+}
+.search-con .years{
+	display: flex;
+	display: -wbekit-flex;
+	align-items: center;
+	border: 1px solid #4486f3;
+	border-radius: 3px;
+	overflow: hidden;
+	height: 28px;
+	line-height: 28px;
+}
+.search-con .years span{
+	width: 60px;
+	text-align: center;
+	color: #4486f3;
+}
+.search-con .years span.active{
+	background-color: #4486f3;
+	color: #FFFFFF;
+}
+.search-con .choice-time{
+	display: flex;
+	display: -wbekit-flex;
+	align-items: center;
+}
+.search-con .choice-time .iconfont{
+	color: #999999;
+	padding: 5px 8px;
+}
+.money-list{
+	display: flex;
+	display: -wbekit-flex;
+	padding: 20px 15px 30px;
+	background-color: #FFFFFF;
+}
+.money-list > div{
+	width: calc(100% / 3 - 10px);
+	padding-left: 10px;
+}
+.money-list .title{
+	color: #666666;
+}
+.money-list .money{
+	font-size: 16px;
+	display: flex;
+	display: -wbekit-flex;
+	align-items: center;
+	margin-top: 8px;
+	line-height: 22px;
+}
+.money-list .money span{ 
+	font-size: 22px;
+	padding-left: 3px;
+}
+.big-title{
+	font-size: 16px;
+	font-weight: bold;
+}
+.more{
+	text-align: center;
+	color: #4486f3;
+	border: 0;
+	background-color: #FFFFFF;
+	display: block;
+	margin: 10px auto 0;
+	outline: none;
+	font-size: 14px;
+}
+.con{
+	background-color: #FFFFFF;
+	margin: 10px 15px 0;
+	border-radius: 8px;
+	padding: 15px 15px 10px;
+}
+.delivery-num{
+	color: #999999;
+	font-size: 13px;
+	padding: 8px 0;
+}
+.employee .list{
+	border-bottom: 1px solid #F7F7F7;
+	position: relative;
+	padding: 20px 0;
+}
+.employee .list .name{
+	line-height: 18px;
+	font-size: 16px;
+}
+.employee .list .name span{
+	color: #999999;
+	padding-left: 15px;
+	font-size: 14px;
+}
+.employee .list .name,
+.employee .list .classify,
+.employee .list .classify > div,
+.statistics .local{
+	display: flex;
+	display: -wbekit-flex;
+	align-items: center;
+}
+.employee .list .classify > div{
+	margin-right: 15px;
+	color: #999999;
+	margin-top: 10px;
+}
+.employee .list .classify img{
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+.employee .list .total-num{
+	position: absolute;
+	top: 32px;
+	right: 0;
+	font-size: 16px;
+}
+.statistics .local{
+	border-top: 1px solid #F7F7F7;
+	border-bottom: 1px solid #F7F7F7;
+	padding: 10px;
+}
+.statistics .local > div{
+	width: 25%;
+	text-align: center;
+}
+.statistics .local > div span{
+	display: block;
+	margin-right: 3px;
+}
+.statistics .local > div span:last-child{
+	margin-top: 5px;
+	display: inline-block;
+	padding: 0 3px;
+	border-bottom: 2px solid #9D9D9D;
+}
+.statistics .local > div span.send{
+	border-color: #5585EC;
+}
+.statistics .local > div span.rep{
+	border-color: #ED8345;
+}
+.statistics .local .title{
+	width: 30%;
+	text-align: left;
+	height: 60px;
+	line-height: 60px;
+	border-right: 1px solid #F7F7F7;
+}
+.table .tr{
+	border-bottom: 1px solid #F7F7F7;
+	display: flex;
+	align-items: center;
+	padding: 12px 0;
+}
+.table .tr .th,
+.table .tr .td{
+	text-align: center;
+	width: 31%;
+}
+.table .tr .th{
+	color: #999999;
+	font-size: 13px;
+}
+.table .tr .th:first-child,
+.table .tr .td:first-child{
+	margin-right: 2%;
+}
+.table .td span{
+	padding: 1px 10px;
+	color: #FFFFFF;
+}
+.table .send-num span{
+	background-color: #5585EC;
+}
+.table .rep-num span{
+	background-color: #ED8345;
+}
+.btn-default-css{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 3px;
+	width: calc(100% - 30px);
+	height: 40px;
+	line-height: 40px;
+	margin: 20px 15px;
+	background-color: #4285F4;
+	color: #fff;
+	font-size: 14px;
+}
+#pie,
+#map{
+	width: 100%;
+	height: 300px;
+}
+.loading{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	background-color: rgba(0,0,0,0.5);
+}
+.loading > div{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	padding: 15px;
+	background-color: #FFFFFF;
+	text-align: center;
+	transform: translate3d(-50%, -50%, 0);
+	border-radius: 5px;
+}
+.loading > div img{
+	display: block;
+	width: 50px;
+	margin: 0 auto 10px;
+}
+[v-cloak]{
+    display: none;
+}
+.none-data-list{
+	text-align: center;
+	color: #999;
+	padding-top: 30%;
+}
+.none-data-list img{
+	display: block;
+	margin: 0 auto 5px;
+	width: 75px;
+	height: 76px;
+}

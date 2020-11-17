@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>仪商汇快运—仪器仪表行业专属物流服务平台</title>
+		<meta name="keywords" content="仪器服务、仪表服务、仪商汇快运、快运、仪商汇、物流服务、省钱发货、发货省钱、运费补贴、快运服务、顺丰、德邦、顺丰快运、德邦快递、仪器仪表服务、发货、大件发货、快递、物流、大件物流、寄小件、寄大件、平台补贴、快件服务、运费折扣、运费减免、节约成本、大件服务、小件服务。" />
+		<meta name="description" content="仪商汇快运是在中国仪器仪表行业代理商分会的指导下，由仪商汇开发与运营，目前已携手顺丰快运、德邦快递，致力于打造仪器仪表行业的专属物流平台，旨在降低企业的物流运费成本，以最低的价位做到最优质的服务，为中小企业发展注入新的动力。" />
+
+		<!-- 正式发布的时候使用，开发期间不启用。↓ -->
+        <!-- <script src="/h5/touch-emulator.js"></script>
+		<script>
+            TouchEmulator();
+			if (document.documentElement.clientWidth > 1024) {
+				window.location.href = '/h5/pcguide.html#'+location.pathname+location.search;
+			}
+		</script>
+        <style>
+            ::-webkit-scrollbar{
+                display: none;
+            }
+        </style>
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?";// 百度统计key
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script> -->
+        <!-- 正式发布的时候使用，开发期间不启用。↑ -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				document.documentElement.style.fontSize = document.documentElement.clientWidth / 20 + 'px'
+			})
+		</script>
+		<link rel="stylesheet" href="<%= BASE_URL %>static/index.css" />
+	</head>
+	<body>
+		<!-- 该文件为 H5 平台的模板 HTML，并非应用入口。 -->
+		<!-- 请勿在此文件编写页面代码或直接运行此文件。 -->
+		<!-- 详见文档：https://uniapp.dcloud.io/collocation/manifest?id=h5-template -->
+		<noscript>
+			<strong>Please enable JavaScript to continue.</strong>
+		</noscript>
+		<div id="app"></div>
+		<!-- built files will be auto injected -->
+		<script>
+			/*BAIDU_STAT*/
+		</script>
+	</body>
+</html>

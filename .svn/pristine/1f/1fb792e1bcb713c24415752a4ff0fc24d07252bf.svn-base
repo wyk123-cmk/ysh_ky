@@ -1,0 +1,159 @@
+.page-bg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: auto;
+}
+.tips{
+	color: #999;
+	padding: 10px 15px 0;
+	font-size: 12px;
+	display: block;
+}
+/* #ifdef MP-WEIXIN */
+.head-right{
+	top: 50px;
+}
+/* #endif */
+.form{
+	background-color: #fff;
+	overflow: hidden;
+	margin-top: 10px;
+	position: relative;
+}
+.form .label-list{
+	border-top: 1px solid #EEEEEE;
+	margin: 0 15px;
+	padding: 15px 0;
+	display: flex;
+	display: -webkit-flex;
+	align-items: flex-start;
+	margin-top: -1px;
+	line-height: 24px;
+}
+.form .label-list .name{
+	display: block;
+	width: 98px;
+	line-height: 20px;
+	color: #999999;
+}
+.form .label-list .radio text{
+	float: left;
+	margin-right: 20px;
+}
+.form .label-list radio{
+	transform: scale(0.6);
+	float: left;
+}
+.form .label-list input,
+.form .label-list .address{
+	line-height: 20px;
+	width: calc(100% - 98px);
+	width: -webkit-calc(100% - 98px);
+}
+.form .label-list .address .txt{
+	display: block;
+}
+.form .label-list textarea,
+.form .label-list .textarea-text{
+	display: block;
+	width: calc(100% - 20px);
+	width: -webkit-calc(100% - 20px);
+	padding: 8px 10px;
+	background-color: #f7f7f7;
+	resize: none;
+	height: 50px;
+}
+.form .label-list .textarea-text{
+	overflow: hidden;
+}
+.form .label-list .no-checked{
+	color: #808080;
+}
+.company-list{
+	border: 1px solid #F7F7F7;
+	position: absolute;
+	top: 108px;
+	left: 15px;
+	right: 15px;
+	z-index: 2;
+	background-color: #FFFFFF;
+	height: 220px;
+	overflow-y: auto;
+	z-index: 99;
+}
+.company-list text{
+	display: block;
+	margin: 10px 15px 10px;
+}
+.invoice-popup,
+.notice-popup{
+	top: 50%;
+	position: fixed;
+	background: #fff;
+	left: 20px;
+	right: 20px;
+	font-size: 15px;
+	z-index: 1000;
+}
+.notice-popup{
+	transform: translate3d(0, -50%, 0);
+	padding-bottom: 20px;
+}
+.notice-popup text{
+	font-size: 13px;
+	color: #666;
+	padding-bottom: 4px;
+	text-align: justify;
+}
+.notice-popup text,
+.invoice-popup .title{
+	display: block;
+	padding: 5px 15px 0;
+}
+.notice-popup .title,
+.invoice-popup .title{
+	padding: 10px 0;
+	margin-bottom: 15px;
+	text-align: center;
+	color: #333;
+	font-size: 14px;
+	border-bottom: 1px solid #efefef;
+}
+.invoice-popup{
+	margin-top: -130px;
+}
+.invoice-popup .info-list{
+	margin: 0 15px 10px;
+}
+.invoice-popup .info-list text{
+	color: #999;
+}
+.invoice-popup .btn{
+	display: -webkit-flex;
+	display: flex;
+	padding-top: 5px;
+}
+.invoice-popup .btn text{
+	display: block;
+	width: 50%;
+	height: 40px;
+	line-height: 40px;
+	color: #333;
+	border-top: 1px solid #EEEEEE;
+	text-align: center;
+}
+.invoice-popup .btn text:last-child{
+	border-left: 1px solid #EEEEEE;
+}
+.label-list.checkbox{
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+}
+.label-list.checkbox text{
+	color: #FF0000;
+	padding-left: 3px;
+}

@@ -1,0 +1,658 @@
+{
+	"pages": [
+		
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "寄快递",
+				"h5": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/me/myCompany",
+			"style": {
+				"navigationBarTitleText": "我的企业",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/index/expressDelivery",
+			"style": {
+				"navigationBarTitleText": "寄快递",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/index/goodsInfo",
+			"style": {
+				"navigationBarTitleText": "物品信息",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		
+		{
+			"path": "pages/index/insuredPrice",
+			"style": {
+				"navigationBarTitleText": "保价",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/index/addedService",
+			"style": {
+				"navigationBarTitleText": "增值服务",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/index/noticeList",
+			"style": {
+				"navigationBarTitleText": "公告",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/index/noticeDetails",
+			"style": {
+				"navigationBarTitleText": "公告",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/order/orderSuccess",
+			"style": {
+				"navigationBarTitleText": "下订单",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/vehicleMail/index",
+			"style": {
+				"navigationBarTitleText": "整车寄件",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/vehicleMail/createOrder",
+			"style": {
+				"navigationBarTitleText": "创建订单",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/vehicleMail/expressGoods",
+			"style": {
+				"navigationBarTitleText": "货物信息",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/vehicleMail/details",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/vehicleMail/insured",
+			"style": {
+				"navigationBarTitleText": "保价",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/order/orderList",
+			"style": {
+				"navigationBarTitleText": "查快递",
+				"h5": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/order/orderDetail",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/order/cancel",
+			"style": {
+				"navigationBarTitleText": "取消订单",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/estimate/estimate",
+			"style": {
+				"navigationBarTitleText": "运费估算",
+				"h5": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/batchSend/index",
+			"style": {
+				"navigationBarTitleText": "批量寄",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/batchSend/batchGoodsInfo",
+			"style": {
+				"navigationBarTitleText": "物品信息",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/userInfo",
+			"style": {
+				"navigationBarTitleText": "我",
+				"h5": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/logs/logs",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"h5": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/me/addressList",
+			"style": {
+				"navigationBarTitleText": "地址薄",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/addressEdit",
+			"style": {
+				"navigationBarTitleText": "新增地址",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/invoice",
+			"style": {
+				"navigationBarTitleText": "申请发票",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/historicalInvoice",
+			"style": {
+				"navigationBarTitleText": "历史开票",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/invoiceSubmit",
+			"style": {
+				"navigationBarTitleText": "申请发票",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/logs/peopleInfo",
+			"style": {
+				"navigationBarTitleText": "完善信息",
+				"h5": {
+					"titleNView": false
+				},
+				"mp-weixin": {
+					"navigationStyle":"custom"
+				}
+			}
+		},
+		{
+			"path": "pages/me/myWallet",
+			"style": {
+				"navigationBarTitleText": "我的钱包",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/myWalletInfo",
+			"style": {
+				"navigationBarTitleText": "钱包明细",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/myCash",
+			"style": {
+				"navigationBarTitleText": "提现",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+		    "path" : "pages/me/myRefill",
+		    "style" : {
+				"navigationBarTitleText": "充值",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+		    "path" : "pages/wx/wxpay",
+		    "style" : {
+				"navigationBarTitleText": "微信支付",
+				"h5": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/me/myWalletDetail",
+			"style": {
+				"navigationBarTitleText": "钱包明细",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/bounty",
+			"style": {
+				"navigationBarTitleText": "我的奖励金",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/bonusCash",
+			"style": {
+				"navigationBarTitleText": "奖励金提现",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/cashApply",
+			"style": {
+				"navigationBarTitleText": "提现",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/withdrawalRecord",
+			"style": {
+				"navigationBarTitleText": "资金明细",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/bountySharePoster",
+			"style": {
+				"navigationBarTitleText": "我的海报",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/explain",
+			"style": {
+				"navigationBarTitleText": "说明",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/coupon",
+			"style": {
+				"navigationBarTitleText": "优惠券",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/moreCoupon",
+			"style": {
+				"navigationBarTitleText": "领券中心",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/shareImage",
+			"style": {
+				"navigationBarTitleText": "分享助力",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		
+		{
+			"path": "pages/me/claimStatus",
+			"style": {
+				"navigationBarTitleText": "资料审核中",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/claim",
+			"style": {
+				"navigationBarTitleText": "认领公司",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/companyRecharge",
+			"style": {
+				"navigationBarTitleText": "企业充值",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/rechargeRecord",
+			"style": {
+				"navigationBarTitleText": "充值记录",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/moneyDetail",
+			"style": {
+				"navigationBarTitleText": "资金明细",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/companyExpress",
+			"style": {
+				"navigationBarTitleText": "企业快递",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/companyInvoice",
+			"style": {
+				"navigationBarTitleText": "企业发票",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/cmpInvoiceSubmit",
+			"style": {
+				"navigationBarTitleText": "开票信息",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/cmpHistoricalInvoice",
+			"style": {
+				"navigationBarTitleText": "历史发票",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/memberList",
+			"style": {
+				"navigationBarTitleText": "成员",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/moveDepartment",
+			"style": {
+				"navigationBarTitleText": "移至部门",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/addMember",
+			"style": {
+				"navigationBarTitleText": "添加成员",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/setPayPassword",
+			"style": {
+				"navigationBarTitleText": "支付密码",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/balanceAlert",
+			"style": {
+				"navigationBarTitleText": "余额预警",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/exportbill",
+			"style": {
+				"navigationBarTitleText": "导出账单",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/companyLog",
+			"style": {
+				"navigationBarTitleText": "企业日志",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/feedback",
+			"style": {
+				"navigationBarTitleText": "问题反馈",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#50a8ff"
+			}
+		},
+		{
+			"path": "pages/me/feedbackList",
+			"style": {
+				"navigationBarTitleText": "问题反馈",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/web-view/index",
+			"style": {
+				"navigationBarTitleText": "仪商汇快运",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+            "path" : "pages/me/userEvaluation",
+            "style" : {
+				"navigationBarTitleText": "用户评价",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+        },
+		{
+			"path": "pages/order/customerService",
+			"style": {
+				"navigationBarTitleText": "联系客服",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/index/auth",
+			"style": {
+				"navigationBarTitleText": "仪商汇快运",
+				"h5": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/news/newList",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/news/newDetails",
+			"style": {
+				"navigationBarTitleText": "消息",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+            "path" : "pages/me/permissionSet",
+            "style" : {
+				"navigationBarTitleText": "权限设置",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+        },
+		{
+            "path" : "pages/me/allowSee",
+            "style" : {
+				"navigationBarTitleText": "允许他(她)查看",
+				"h5": {
+					"titleNView": false
+				},
+				"mp-weixin": {
+					"navigationStyle":"custom"
+				}
+			}
+        },
+		{
+            "path" : "pages/me/selectMember",
+            "style" : {
+            	"navigationBarTitleText": "选择成员",
+            	"h5": {
+            		"titleNView": false
+            	},
+            	"mp-weixin": {
+            		"navigationStyle":"custom"
+            	}
+            }
+        },
+        {
+            "path" : "pages/index/vehicleValuation",
+            "style" : {
+				"navigationBarTitleText": "整车报价",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+        },
+		{
+			"path": "pages/me/placeDelivery",
+			"style": {
+				"navigationBarTitleText": "员工发货统计",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/me/sendStatistics",
+			"style": {
+				"navigationBarTitleText": "寄送地统计",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/welfare/index",
+			"style": {
+				"navigationBarTitleText": "快运福利",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/welfare/discountLine",
+			"style": {
+				"navigationBarTitleText": "特价线路",
+				"navigationBarBackgroundColor": "#4486f3",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+            "path" : "pages/news/shareAddress",
+            "style" : {
+            	"navigationBarTitleText": "共享他(她)",
+				"navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+		{
+            "path" : "pages/news/selectAddress",
+            "style" : {
+            	"navigationBarTitleText": "选择地址",
+            	"navigationBarBackgroundColor": "#FFFFFF"
+            }
+        },
+		{
+			"path": "pages/index/warrantyDetail",
+			"style": {
+				"navigationBarTitleText": "保单详情 (给专员的)",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/index/batchWaybill",
+			"style": {
+				"navigationBarTitleText": "运单投保",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/activityCenter/tz-activity",
+			"style": {
+				"navigationBarTitleText": "个人推广",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+		    "path" : "pages/activityCenter/tz-immediatelyget",
+		    "style" : {
+				"navigationBarTitleText": "立即领取",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/activityCenter/seeMore",
+			"style": {
+				"navigationBarTitleText": "发货用户",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/error",
+			"style": {
+				"navigationBarTitleText": "系统例行维护",
+				"h5": {
+					"titleNView": false
+				},
+				"mp-weixin": {
+					"navigationStyle":"custom"
+				}
+			}
+		}
+        
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#4285F4",
+		"backgroundColor": "#f8f8f8",
+		"borderStyle": "white",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/images/tabbar1.png",
+			"selectedIconPath": "static/images/tabbar1-active.png",
+			"text": "寄快递"
+		}, {
+			"pagePath": "pages/order/orderList",
+			"iconPath": "static/images/tabbar2.png",
+			"selectedIconPath": "static/images/tabbar2-active.png",
+			"text": "查快递"
+		}, {
+			"pagePath": "pages/estimate/estimate",
+			"iconPath": "static/images/tabbar3.png",
+			"selectedIconPath": "static/images/tabbar3-active.png",
+			"text": "运费估算"
+		}, {
+			"pagePath": "pages/me/userInfo",
+			"iconPath": "static/images/tabbar4.png",
+			"selectedIconPath": "static/images/tabbar4-active.png",
+			"text": "我"
+		}]
+	}
+}

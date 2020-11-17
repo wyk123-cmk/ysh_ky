@@ -1,0 +1,119 @@
+.main{
+	padding-bottom: 26px;
+	background-color: #F7F7F7;
+}
+.main-top{
+	background: linear-gradient(#ff822e 1%, #fff 60%);
+	padding: 20px 15px;
+}
+.bank-img{
+	position: absolute;
+	right: -30px;
+	bottom: -30px;
+	width: 120px;
+	height: 120px;
+}
+.card-con{
+	background: linear-gradient(135deg, #fef7d3, #fbe5b4);
+	border-radius: 10px;
+	padding: 15px 10px;
+	position: relative;
+	box-shadow: 0 0 4px #ffc8a3;
+	overflow: hidden;
+	
+}
+.card-con > view{
+	color: #bb6838;
+	position: relative;
+	z-index: 2;
+}
+.card-con .cmp-name{
+	width: 85%;
+	margin-bottom: 15px;
+	margin-top: 3px;
+}
+.card-con .bank{
+	font-size: 12px;
+}
+.card-con .bank-num{
+	font-size: 26px;
+	width: 100%;
+}
+.card-con .copy{
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	text-align: center;
+	transform: scale(0.8);
+}
+.card-con .copy .iconfont{
+	color: #918263;
+}
+.card-con text{
+	display: block;
+}
+.tips{
+	padding-top: 10px;
+	text-align: justify;
+	line-height: 20px;
+}
+.tips text{
+	color: #999;
+	font-size: 12px;
+}
+.amount,
+.voucher{
+	background: #fff;
+	padding: 15px;
+	margin-top: 10px;
+}
+.amount > view{
+	display: flex; 
+	display: -webkit-flex;
+	align-items: center;
+	flex-flow: row; 
+	padding-top: 10px;
+	font-size: 24px;
+}
+.amount > view input{
+	font-size: 24px;
+	color: #e60000;
+}
+.voucher{
+	margin-bottom: 20px;
+}
+.voucher textarea{
+	width: calc(100% - 20px);
+	width: -webkit-calc(100% - 20px);
+	height: 70px;
+	margin-top: 10px;
+	border: 1px solid #eee;
+	padding: 10px;
+	border-radius: 4px;
+}
+.upload-box{
+	margin-top: 20px;
+}
+.upload-box .img-list,
+.upload-box .add-pic{
+	display: inline-block;
+	position: relative;
+	margin-bottom: 10px;
+	width: 68px;
+	height: 68px;
+	border: 1px solid #F5F5F5;
+	margin-right: 10px;
+}
+.upload-box .img-list .iconfont{
+	color: #FF0000;
+	position: absolute;
+	top: -8px;
+	right: -5px;
+}
+.upload-box image{
+	width: 68px;
+	height: 68px;
+}
+.input-view{
+	width: 68px;
+}

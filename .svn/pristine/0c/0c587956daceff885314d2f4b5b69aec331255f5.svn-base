@@ -1,0 +1,146 @@
+.head-con{
+	background-color: #F7F7F7;
+	padding: 20px 15px;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	font-size: 16px;
+}
+.head-con .iconfont{
+	color: #6FC566;
+	font-size: 35px;
+	padding-right: 10px;
+}
+.head-con .tips{
+	font-size: 12px;
+	padding-left: 10px;
+	color: #999;
+}
+.con{
+	padding: 0 15px;
+}
+.con .small-title{
+	display: block;
+	padding: 25px 0;
+}
+.con .label-input{
+	border-bottom: 1px solid #eeeeee;
+	padding-bottom: 8px;
+	display: flex;
+	align-items: center;
+	font-size: 32px;
+}
+.con .label-input input{
+	font-size: 32px;
+	line-height: 32px;
+	height: 32px;
+}
+.all-amount{
+	color: #999;
+	font-size: 12px;
+	padding-top: 10px;
+}
+.all-amount text{
+	color: #333333;
+}
+.all-amount.right{
+	text-align: right;
+}
+.all-amount .red{
+	color: #FF0000;
+	font-size: 14px;
+}
+.note{
+	color: red;
+	font-size: 12px;
+	padding-top: 5px;
+	display: block;
+}
+.con button{
+	background-color: #4285F4;
+	color: #FFFFFF;
+	width: 150px;
+	margin-top: 30px;
+}
+.con button.bounty{
+	background: #fe6603;
+	width: 100%;
+	border-radius: 36px;
+}
+.popup-tips{
+	position: fixed;
+	top: 50%;
+	left: 20px;
+	right: 20px;
+	border-radius: 8px;
+	overflow: hidden;
+	z-index: 1000;
+	transform: translate3d(0, -50%, 0);
+	background-color: #FFFFFF;
+}
+.popup-tips .con{
+	margin: 30px 0;
+	color: #FF0000;
+	text-align: center;
+}
+.popup-tips .con input{
+	display: block;
+	height: 44px;
+	line-height: 44px;
+	width: 120px;
+	margin: 15px auto 0;
+	border: 1px solid #E6E6E6;
+	border-radius: 3px;
+}
+.popup-tips .btn{
+	display: flex;
+	align-items: center;
+	border-top: 1px solid #F5F5F5;
+}
+.popup-tips .btn button{
+	width: 50%;
+	line-height: 44px;
+	background-color: #FFFFFF;
+	border-radius: 0;
+	color: #333;
+	font-size: 16px;
+}
+.popup-tips .btn button:first-child{
+	color: #007aff;
+	border-right: 1px solid #F5F5F5;
+}
+.guide .title{
+	text-align: center;
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	padding-top: 40px;
+}
+.guide .explain{
+	margin: 0 15px;
+}
+.guide .pic{
+	text-align: center;
+	margin-bottom: 50px;
+}
+.guide image{
+	width: 180px;
+	height: 180px;
+	display: block;
+	margin: 40px auto 0;
+}
+.activity-explain{
+	margin: 30px 15px;
+	border-radius: 3px;
+	padding: 10px;
+	background-color: #F7F9FF;
+}
+.activity-explain text{
+	display: block;
+	line-height: 24px;
+	color: #666666;
+}
+.activity-explain .title{
+	color: #333333;
+	margin-bottom: 5px;
+}
